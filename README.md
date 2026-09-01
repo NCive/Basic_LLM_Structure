@@ -1,2 +1,1 @@
-# Diana_LLM
-Custom Made LLM
+Basic Structure
