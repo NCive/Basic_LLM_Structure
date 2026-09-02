@@ -4,6 +4,8 @@ from tokenizers.pre_tokenizers import ByteLevel as blpt
 from tokenizers.trainers import BpeTrainer
 from tokenizers.decoders import ByteLevel as bldec
 
+#### Tokeniser Initialise & Training
+
 # tokenizer = Tokenizer(BPE())
 # tokenizer.pre_tokenizer = blpt()
 # tokenizer.decoder = bldec()
@@ -26,6 +28,10 @@ from tokenizers.decoders import ByteLevel as bldec
 # tokenizer.train(files, trainer)
 # tokenizer.save("tokenizer.json")
 # print("Tokenizer saved.")
+
+
+
+###Tokenizer Testing
 
 tokenizer = Tokenizer.from_file("tokenizer.json")
 print("Tokenizer loaded.")

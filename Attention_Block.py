@@ -1,8 +1,7 @@
 import torch
 import torch.nn as nn
-from Embedding import final_embedded
 
-###First Transformer + Multi-head Attention + LayerNorm 
+### First Transformer + Multi-head Attention + LayerNorm 
 class TransformerBlock(nn.Module):
     def __init__(self, embedding_dim, num_heads):
         super().__init__()
@@ -93,8 +92,6 @@ class TransformerBlock(nn.Module):
 
         #Residual1
         residual1 = x + attention_output
-
-
         normalized_2 = self.layer_norm2(residual1)
 
 
@@ -107,15 +104,3 @@ class TransformerBlock(nn.Module):
 
 
         return final_output
-
-
-#Initialise
-# num_heads = 8
-# embedding_dim = 256
-
-# block = TransformerBlock(embedding_dim, num_heads=num_heads)
-# output = block(final_embedded)
-
-
-# print("Input shape:", final_embedded.shape)
-# print("Transformer block output:", output.shape)
